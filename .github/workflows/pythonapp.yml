@@ -22,10 +22,6 @@ jobs:
         cd $GITHUB_WORKSPACE/django/notejam/
         ./manage.py syncdb --noinput
         ./manage.py migrate
-    - name: launch
-      run: |
-        cd $GITHUB_WORKSPACE/django/notejam/
-        ./manage.py runserver
     - name: Test
       run: |
         cd $GITHUB_WORKSPACE/django/notejam/
