@@ -20,7 +20,7 @@ jobs:
     - name: create db schema
       run: |
         cd $GITHUB_WORKSPACE/django/notejam/
-        ./manage.py syncdb
+        ./manage.py syncdb --noinput
         ./manage.py migrate
     - name: launch
       run: |
