@@ -16,17 +16,17 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r /django/requirements.txt
+        pip install -r $GITHUB_WORKSPACE/django/requirements.txt
     - name: create db schema
       run: |
-        cd /django/notejam/
+        cd $GITHUB_WORKSPACE/django/notejam/
         ./manage.py syncdb
         ./manage.py migrate
     - name: launch
       run: |
-        cd /django/notejam/
+        cd $GITHUB_WORKSPACE/django/notejam/
         ./manage.py runserver
     - name: Test
       run: |
-        cd /django/notejam/
+        cd $GITHUB_WORKSPACE/django/notejam/
         ./manage.py test
