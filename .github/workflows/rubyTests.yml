@@ -21,7 +21,7 @@ jobs:
 
     - name: Prereqs
       run: |
-        sudo apt-get update && sudo apt-get libsqlite3-dev nodejs
+        sudo apt-get update && sudo apt-get install libsqlite3-dev nodejs
 
     - name: Build and test with Rake
       run: |
