@@ -17,10 +17,7 @@ jobs:
       uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.6.x
-    - name: Prereqs
-      run: |
-        sudo apt-get update
-        sudo apt-get install ruby2.5-dev, build-essential, zlib1g-dev, libsqlite3-dev, nodejs
+
     - name: Build and test with Rake
       run: |
         cd rubyonrails/notejam
