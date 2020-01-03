@@ -4,6 +4,7 @@ on:
   push:
     paths:
     - rubyonrails/**
+    - .github/workflows/rubyTests.yml
 
 jobs:
   build:
