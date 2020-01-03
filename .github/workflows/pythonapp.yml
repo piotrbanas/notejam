@@ -1,6 +1,9 @@
 name: notejam python
 
-on: [push]
+on:
+  push:
+    paths:
+    - django/**
 
 jobs:
   test:
