@@ -19,6 +19,10 @@ jobs:
       with:
         ruby-version: 2.6.x
 
+    - name: Prereqs
+      run: |
+        sudo apt-get update && sudo apt-get libsqlite3-dev nodejs
+
     - name: Build and test with Rake
       run: |
         cd rubyonrails/notejam
