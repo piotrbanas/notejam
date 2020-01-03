@@ -28,5 +28,4 @@ jobs:
         cd rubyonrails/notejam
         gem install bundler -v 1.17.3
         bundle install --jobs 4 --retry 3
-        bundle exec rake db:migrate
         bundle exec rake test
