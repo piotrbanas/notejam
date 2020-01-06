@@ -26,6 +26,6 @@ jobs:
     - name: Build and test with Rake
       run: |
         cd rubyonrails/notejam
-        gem install bundler -v 1.17.3
+        gem install bundler
         bundle install --jobs 4 --retry 3
         bundle exec rake test
