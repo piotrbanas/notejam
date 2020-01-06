@@ -121,7 +121,6 @@ echo "$DEPLOYMENT_TARGET"
 if [ -e "$DEPLOYMENT_TARGET/Gemfile" ]; then
   echo "Found gemfile"
   pushd "$DEPLOYMENT_TARGET"
-  gem install bundler -v 1.17.3
   eval "$(rbenv init -)"
   exitWithMessageOnError "init failed"
   
@@ -147,6 +146,9 @@ if [ -e "$DEPLOYMENT_TARGET/Gemfile" ]; then
   
   mv -f /tmp/gems.tgz $RUBY_SITE_CONFIG_DIR
   
+  echo "running db:migrate"
+  bundle exec rake db:migrate
+
   if [ "$ASSETS_PRECOMPILE" == true ]; then 
 	echo "running rake assets:precompile"
     bundle exec rake --trace assets:precompile
