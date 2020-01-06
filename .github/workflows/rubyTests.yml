@@ -19,8 +19,13 @@ jobs:
       with:
         ruby-version: 2.6
 
+    - name: Prereqs
+      run: |
+        sudo apt-get update && sudo apt-get install libsqlite3-dev
+
     - name: Build and test with Rake
       run: |
         cd rubyonrails/notejam
+        gem install bundler -v 1.17.3
         bundle install --jobs 4 --retry 3
         bundle exec rake test
