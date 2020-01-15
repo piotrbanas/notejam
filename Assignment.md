@@ -13,7 +13,7 @@ Table 1 - Version history
 ### Description
 
 Notejam is a simple application provided by Nordcloud for the purposes of candidate evaluation. Candidates can choose from multiple implementations of Notejam application in different languages and frameworks.
-Candoidates are tasked with implementing a simple CI/CD solution in accordance with provided requirements.
+Candidates are tasked with implementing a simple CI/CD solution in accordance with provided requirements.
 
 ### Implementation
 
@@ -41,7 +41,7 @@ Candoidates are tasked with implementing a simple CI/CD solution in accordance w
 2. Python
     1. Tests defined in `.github\workflows\pythonapp.yml`
 
-    2. Build and release deinfed as a Azure Multistage Pipeline: `\azure-pipelines.yml`
+    2. Build and release defined as a Azure Multistage Pipeline: `\azure-pipelines.yml`
 
 ### Business Requirements
 
@@ -52,6 +52,6 @@ Candoidates are tasked with implementing a simple CI/CD solution in accordance w
 3. The Customer ensures continuity in service in case of datacenter failures. The Service must be capable of being migrated to any regions supported by the cloud provider in case of emergency. 
     1. The App Service can be cloned into a App Service Plan in another region. Both ASPs will be kept behind Azure Front Door. Databases can also be geo-replicated.
 4. The Customer is planning to have more than 100 developers to work in this project who want to roll out multiple deployments a day without interruption / downtime. The Customer wants to provision separated environments to support their development process for development, testing, production in the near future. 
-    1. A properly configured branching policy and environments in a CI/CD pipline will ensure this.
+    1. A properly configured branching policy and environments in a CI/CD pipeline will ensure this.
 5. The Customer wants to see relevant metrics and logs from the infrastructure for quality assurance and security purposes. 
     1. App Insights, Logs and Metrics can be enabled for the App Service.
