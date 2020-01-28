@@ -12,8 +12,7 @@ Table 1 - Version history
 
 ### Description
 
-Notejam is a simple application provided by Nordcloud for the purposes of candidate evaluation. Candidates can choose from multiple implementations of Notejam application in different languages and frameworks.
-Candidates are tasked with implementing a simple CI/CD solution in accordance with provided requirements.
+Notejam is a simple application provided in different languages and frameworks for the purpose of evaluating CI/CD solutions in accordance with provided requirements.
 
 ### Implementation
 
